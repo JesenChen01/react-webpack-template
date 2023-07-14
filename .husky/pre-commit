@@ -1,0 +1,10 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+# npm test
+
+echo ""
+echo "====== pre-commit prettier、eslint、stylelint修复 ======"
+echo ""
+
+npx lint-staged # 校验

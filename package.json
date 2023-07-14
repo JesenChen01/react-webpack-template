@@ -1,0 +1,62 @@
+{
+  "name": "react-webpack-template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "",
+    "build": "",
+    "serve": "",
+    "lint:eslint": "eslint --config .eslintrc.js src --fix",
+    "lint:prettier": "prettier --write \"**/*.{ts,tsx,js,jsx,css,scss,less,md,vue,html}\"",
+    "lint:prettier:check": "prettier --check \"**/*.{ts,tsx,js,jsx,css,scss,less,md,vue,html}\"",
+    "lint:style": "stylelint --config .stylelintrc.js \"./**/*.{css,scss,less}\" --fix",
+    "lint-staged": "lint-staged --allow-empty",
+    "prepare": "husky install",
+    "commit": "git-cz"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "keywords": [],
+  "author": "JesenChen",
+  "license": "ISC",
+  "devDependencies": {
+    "@commitlint/cli": "^17.6.6",
+    "@commitlint/config-conventional": "^17.6.6",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "commitizen": "^4.3.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^8.44.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "eslint-plugin-react": "^7.32.2",
+    "husky": "^8.0.0",
+    "lint-staged": "^13.2.3",
+    "postcss-scss": "^4.0.6",
+    "prettier": "3.0.0",
+    "stylelint": "^15.10.1",
+    "stylelint-config-standard": "^34.0.0",
+    "stylelint-order": "^6.0.3",
+    "typescript": "^5.1.6"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.14.1"
+  },
+  "lint-staged": {
+    "**/*.{js,jsx,ts,tsx}": [
+      "eslint --config .eslintrc.js --fix"
+    ],
+    "*.{ts,tsx,js,json,html,yml,css,less,scss,md}": [
+      "prettier --write"
+    ],
+    "*.{css,less,scss}": [
+      "stylelint --fix"
+    ]
+  }
+}
