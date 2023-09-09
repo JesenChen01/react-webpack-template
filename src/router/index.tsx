@@ -1,17 +1,13 @@
-import { createBrowserRouter, RouteObject } from 'react-router-dom'
-import React from 'react'
-import Index from '@/pages/index'
-
-export type customRouteObject = RouteObject & { name: string }
-
-export const routesList: customRouteObject[] = [
+import { createBrowserRouter, RouteObject } from "react-router-dom";
+import Index from "@/pages/index/index";
+import React from "react";
+export const routes: RouteObject[] = [
   {
-    path: '/',
-    name: '首页',
+    path: "/",
     element: <Index />,
   },
-]
+];
 
-const router = createBrowserRouter(routesList)
+const router = createBrowserRouter(routes);
 
-export default router
+export default router;
